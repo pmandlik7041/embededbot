@@ -1,5 +1,23 @@
-<html>
-<script type='text/javascript'>
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <body>
+      <apex:image id="theImage" value="{!$Resource.gofiberWebsite}" alt="Description of image here"/>
+
+      <script>
+            var videoAccordion = document.getElementById("accordion");
+            videoAccordion.addEventListener("click", function() {
+            this.classList.toggle("active");
+
+            var videoContainer = this.nextElementSibling;
+            if (videoContainer.style.display === "block") {
+                videoContainer.style.display = "none";
+            } else {
+                videoContainer.style.display = "block";
+            }
+        });
+        </script>
+    
+      <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
@@ -18,4 +36,6 @@
 	};
 </script>
 <script type='text/javascript' src='https://convergeict--test.sandbox.my.site.com/ESWConradbotdeployment1708578764389/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-</html>
+
+    </body>
+  </html>
